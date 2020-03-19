@@ -12,7 +12,7 @@ module Elasticsearch
       # @option arguments [Time] :master_timeout Specify timeout for connection to master
 
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/modules-scripting.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/modules-scripting.html
       #
       def delete_script(arguments = {})
         raise ArgumentError, "Required argument 'id' missing" unless arguments[:id]

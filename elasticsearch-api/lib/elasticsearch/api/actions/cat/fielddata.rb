@@ -20,7 +20,7 @@ module Elasticsearch
         # @option arguments [List] :fields A comma-separated list of fields to return in the output
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-fielddata.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-fielddata.html
         #
         def fielddata(arguments = {})
           arguments = arguments.clone

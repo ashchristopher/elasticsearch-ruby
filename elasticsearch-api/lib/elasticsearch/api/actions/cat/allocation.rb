@@ -21,7 +21,7 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-allocation.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-allocation.html
         #
         def allocation(arguments = {})
           arguments = arguments.clone

@@ -22,7 +22,7 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/tasks.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/tasks.html
         #
         def tasks(arguments = {})
           arguments = arguments.clone

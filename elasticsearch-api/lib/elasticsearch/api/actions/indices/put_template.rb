@@ -18,7 +18,7 @@ module Elasticsearch
 
         # @option arguments [Hash] :body The template definition (*Required*)
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-templates.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-templates.html
         #
         def put_template(arguments = {})
           raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

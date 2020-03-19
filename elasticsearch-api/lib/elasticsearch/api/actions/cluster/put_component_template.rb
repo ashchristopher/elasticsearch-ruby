@@ -4,29 +4,29 @@
 
 module Elasticsearch
   module API
-    module Indices
+    module Cluster
       module Actions
-        # Creates an index with optional settings and mappings.
+        # Creates or updates a component template
         #
-        # @option arguments [String] :index The name of the index
-        # @option arguments [Boolean] :include_type_name Whether a type should be expected in the body of the mappings.
-        # @option arguments [String] :wait_for_active_shards Set the number of active shards to wait for before the operation returns.
+        # @option arguments [String] :name The name of the template
+        # @option arguments [Boolean] :create Whether the index template should only be added if new or can also replace an existing one
         # @option arguments [Time] :timeout Explicit operation timeout
         # @option arguments [Time] :master_timeout Specify timeout for connection to master
 
-        # @option arguments [Hash] :body The configuration for the index (`settings` and `mappings`)
+        # @option arguments [Hash] :body The template definition (*Required*)
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-create-index.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-component-templates.html
         #
-        def create(arguments = {})
-          raise ArgumentError, "Required argument 'index' missing" unless arguments[:index]
+        def put_component_template(arguments = {})
+          raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
+          raise ArgumentError, "Required argument 'name' missing" unless arguments[:name]
 
           arguments = arguments.clone
 
-          _index = arguments.delete(:index)
+          _name = arguments.delete(:name)
 
           method = Elasticsearch::API::HTTP_PUT
-          path   = "#{Utils.__listify(_index)}"
+          path   = "_component_template/#{Utils.__listify(_name)}"
           params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
           body = arguments[:body]
@@ -36,9 +36,8 @@ module Elasticsearch
         # Register this action with its valid params when the module is loaded.
         #
         # @since 6.2.0
-        ParamsRegistry.register(:create, [
-          :include_type_name,
-          :wait_for_active_shards,
+        ParamsRegistry.register(:put_component_template, [
+          :create,
           :timeout,
           :master_timeout
         ].freeze)

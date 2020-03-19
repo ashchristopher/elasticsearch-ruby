@@ -29,7 +29,7 @@ module Elasticsearch
         #   (options: green,yellow,red)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-health.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-health.html
         #
         def health(arguments = {})
           arguments = arguments.clone

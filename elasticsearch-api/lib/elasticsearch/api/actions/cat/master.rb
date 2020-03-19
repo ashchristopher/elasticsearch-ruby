@@ -17,7 +17,7 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-master.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-master.html
         #
         def master(arguments = {})
           arguments = arguments.clone

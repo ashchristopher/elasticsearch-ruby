@@ -17,7 +17,7 @@ module Elasticsearch
         #   (options: open,closed,none,all)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-flush.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-flush.html
         #
         def flush(arguments = {})
           arguments = arguments.clone

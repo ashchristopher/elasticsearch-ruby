@@ -20,14 +20,14 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-pending-tasks.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-pending-tasks.html
         #
         def pending_tasks(arguments = {})
           arguments = arguments.clone
 
           method = Elasticsearch::API::HTTP_GET
           path   = "_cat/pending_tasks"
-          params = Elasticsearch::API::Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
+          params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
           params[:h] = Utils.__listify(params[:h]) if params[:h]
 
           body = nil

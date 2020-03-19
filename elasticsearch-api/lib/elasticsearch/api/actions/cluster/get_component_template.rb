@@ -6,20 +6,26 @@ module Elasticsearch
   module API
     module Cluster
       module Actions
-        # Returns a list of any cluster-level changes (e.g. create index, update mapping,
-        # allocate or fail shard) which have not yet been executed.
+        # Returns one or more component templates
         #
+        # @option arguments [List] :name The comma separated names of the component templates
+        # @option arguments [Time] :master_timeout Explicit operation timeout for connection to master node
         # @option arguments [Boolean] :local Return local information, do not retrieve the state from master node (default: false)
-        # @option arguments [Time] :master_timeout Specify timeout for connection to master
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-pending.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-component-templates.html
         #
-        def pending_tasks(arguments = {})
+        def get_component_template(arguments = {})
           arguments = arguments.clone
 
+          _name = arguments.delete(:name)
+
           method = Elasticsearch::API::HTTP_GET
-          path   = "_cluster/pending_tasks"
+          path   = if _name
+                     "_component_template/#{Utils.__listify(_name)}"
+                   else
+                     "_component_template"
+end
           params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
           body = nil
@@ -29,9 +35,9 @@ module Elasticsearch
         # Register this action with its valid params when the module is loaded.
         #
         # @since 6.2.0
-        ParamsRegistry.register(:pending_tasks, [
-          :local,
-          :master_timeout
+        ParamsRegistry.register(:get_component_template, [
+          :master_timeout,
+          :local
         ].freeze)
 end
       end

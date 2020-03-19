@@ -15,7 +15,7 @@ module Elasticsearch
         # @option arguments [Time] :timeout Explicit operation timeout
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-nodes-usage.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-nodes-usage.html
         #
         def usage(arguments = {})
           arguments = arguments.clone

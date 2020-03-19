@@ -25,7 +25,7 @@ module Elasticsearch
         # Deprecated since version 7.0.0
         #
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-put-mapping.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-put-mapping.html
         #
         def put_mapping(arguments = {})
           raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
@@ -39,13 +39,14 @@ module Elasticsearch
           method = Elasticsearch::API::HTTP_PUT
           path   = if _index && _type
                      "#{Utils.__listify(_index)}/#{Utils.__listify(_type)}/_mappings"
-                   elsif _type
-                     "_mappings/#{Utils.__listify(_type)}"
                    elsif _index
                      "#{Utils.__listify(_index)}/_mappings"
+                   elsif _type
+                     "_all/#{Utils.__listify(_type)}/_mappings"
                    else
-                     "_mapping/#{Utils.__listify(_type)}"
+                     "_mapping"
   end
+
           params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
           body = arguments[:body]

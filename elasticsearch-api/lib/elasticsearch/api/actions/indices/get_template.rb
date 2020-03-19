@@ -15,7 +15,7 @@ module Elasticsearch
         # @option arguments [Boolean] :local Return local information, do not retrieve the state from master node (default: false)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-templates.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-templates.html
         #
         def get_template(arguments = {})
           arguments = arguments.clone

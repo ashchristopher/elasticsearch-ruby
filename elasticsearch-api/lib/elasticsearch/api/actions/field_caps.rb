@@ -17,7 +17,7 @@ module Elasticsearch
       # @option arguments [Boolean] :include_unmapped Indicates whether unmapped fields should be included in the response.
 
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/search-field-caps.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-field-caps.html
       #
       def field_caps(arguments = {})
         arguments = arguments.clone

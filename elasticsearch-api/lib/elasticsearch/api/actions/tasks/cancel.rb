@@ -14,7 +14,7 @@ module Elasticsearch
         # @option arguments [String] :parent_task_id Cancel tasks with specified parent task id (node_id:task_number). Set to -1 to cancel all.
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/tasks.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/tasks.html
         #
         def cancel(arguments = {})
           arguments = arguments.clone

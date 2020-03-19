@@ -19,7 +19,7 @@ module Elasticsearch
 
         # @option arguments [Hash] :body The conditions that needs to be met for executing rollover
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-rollover-index.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-rollover-index.html
         #
         def rollover(arguments = {})
           raise ArgumentError, "Required argument 'alias' missing" unless arguments[:alias]

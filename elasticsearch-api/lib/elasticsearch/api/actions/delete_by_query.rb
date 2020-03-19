@@ -9,6 +9,7 @@ module Elasticsearch
       #
       # @option arguments [List] :index A comma-separated list of index names to search; use `_all` or empty string to perform the operation on all indices  (*Required*)
       # @option arguments [List] :type A comma-separated list of document types to search; leave empty to perform the operation on all types
+      # @option arguments [String] :analyzer The analyzer to use for the query string
       # @option arguments [Boolean] :analyze_wildcard Specify whether wildcard and prefix queries should be analyzed (default: false)
       # @option arguments [String] :default_operator The default operator for query string query (AND or OR)
       #   (options: AND,OR)
@@ -57,7 +58,7 @@ module Elasticsearch
       # Deprecated since version 7.0.0
       #
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/docs-delete-by-query.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/docs-delete-by-query.html
       #
       def delete_by_query(arguments = {})
         raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
@@ -85,6 +86,7 @@ module Elasticsearch
       #
       # @since 6.2.0
       ParamsRegistry.register(:delete_by_query, [
+        :analyzer,
         :analyze_wildcard,
         :default_operator,
         :df,

@@ -12,7 +12,7 @@ module Elasticsearch
         # @option arguments [List] :s Comma-separated list of column names or column aliases to sort by
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat.html
         #
         def help(arguments = {})
           arguments = arguments.clone

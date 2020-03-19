@@ -10,7 +10,7 @@ module Elasticsearch
         #
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/grok-processor.html#grok-processor-rest-get
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/grok-processor.html#grok-processor-rest-get
         #
         def processor_grok(arguments = {})
           arguments = arguments.clone

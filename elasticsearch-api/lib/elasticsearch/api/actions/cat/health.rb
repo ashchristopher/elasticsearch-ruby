@@ -19,14 +19,14 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-health.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-health.html
         #
         def health(arguments = {})
           arguments = arguments.clone
 
           method = Elasticsearch::API::HTTP_GET
           path   = "_cat/health"
-          params = Elasticsearch::API::Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
+          params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
           params[:h] = Utils.__listify(params[:h]) if params[:h]
 
           body = nil

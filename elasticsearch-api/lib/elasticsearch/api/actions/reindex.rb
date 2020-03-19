@@ -20,7 +20,7 @@ module Elasticsearch
 
       # @option arguments [Hash] :body The search definition using the Query DSL and the prototype for the index request. (*Required*)
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/docs-reindex.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/docs-reindex.html
       #
       def reindex(arguments = {})
         raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

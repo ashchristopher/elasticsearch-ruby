@@ -15,7 +15,7 @@ module Elasticsearch
 
       # @option arguments [Hash] :body The document (*Required*)
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/modules-scripting.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/modules-scripting.html
       #
       def put_script(arguments = {})
         raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

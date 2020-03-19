@@ -18,7 +18,7 @@ module Elasticsearch
         #   (options: open,closed,none,all)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-shards-stores.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-shards-stores.html
         #
         def shard_stores(arguments = {})
           arguments = arguments.clone

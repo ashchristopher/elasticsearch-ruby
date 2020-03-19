@@ -15,7 +15,7 @@ module Elasticsearch
         #   (options: open,closed,none,all)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-upgrade.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-upgrade.html
         #
         def get_upgrade(arguments = {})
           arguments = arguments.clone

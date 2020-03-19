@@ -21,7 +21,7 @@ module Elasticsearch
         # @option arguments [Boolean] :include_defaults Whether to return all default setting for each of the indices.
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-get-settings.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-get-settings.html
         #
         def get_settings(arguments = {})
           arguments = arguments.clone

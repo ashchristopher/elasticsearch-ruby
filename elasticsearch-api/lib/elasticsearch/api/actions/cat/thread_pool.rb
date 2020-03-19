@@ -22,7 +22,7 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-thread-pool.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-thread-pool.html
         #
         def thread_pool(arguments = {})
           arguments = arguments.clone

@@ -67,7 +67,7 @@ module Elasticsearch
       # Deprecated since version 7.0.0
       #
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/search-search.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-search.html
       #
       def search(arguments = {})
         arguments = arguments.clone

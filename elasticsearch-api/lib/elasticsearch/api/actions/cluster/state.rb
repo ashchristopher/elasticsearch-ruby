@@ -23,7 +23,7 @@ module Elasticsearch
         #   (options: open,closed,none,all)
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-state.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-state.html
         #
         def state(arguments = {})
           arguments = arguments.clone

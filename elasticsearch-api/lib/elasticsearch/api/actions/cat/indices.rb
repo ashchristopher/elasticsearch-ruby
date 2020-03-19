@@ -11,7 +11,7 @@ module Elasticsearch
         # @option arguments [List] :index A comma-separated list of index names to limit the returned information
         # @option arguments [String] :format a short version of the Accept header, e.g. json, yaml
         # @option arguments [String] :bytes The unit in which to display byte values
-        #   (options: b,k,m,g)
+        #   (options: b,k,kb,m,mb,g,gb,t,tb,p,pb)
 
         # @option arguments [Boolean] :local Return local information, do not retrieve the state from master node (default: false)
         # @option arguments [Time] :master_timeout Explicit operation timeout for connection to master node
@@ -29,7 +29,7 @@ module Elasticsearch
         # @option arguments [Boolean] :include_unloaded_segments If set to true segment stats will include stats for segments that are not currently loaded into memory
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-indices.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-indices.html
         #
         def indices(arguments = {})
           arguments = arguments.clone

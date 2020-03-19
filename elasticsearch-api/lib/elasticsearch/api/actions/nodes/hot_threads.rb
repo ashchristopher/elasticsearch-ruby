@@ -24,7 +24,7 @@ module Elasticsearch
         # Deprecated since version 7.0.0
         #
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-nodes-hot-threads.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-nodes-hot-threads.html
         #
         def hot_threads(arguments = {})
           arguments = arguments.clone

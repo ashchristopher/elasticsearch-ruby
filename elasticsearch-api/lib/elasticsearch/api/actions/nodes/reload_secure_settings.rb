@@ -12,7 +12,7 @@ module Elasticsearch
         # @option arguments [Time] :timeout Explicit operation timeout
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/secure-settings.html#reloadable-secure-settings
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/secure-settings.html#reloadable-secure-settings
         #
         def reload_secure_settings(arguments = {})
           arguments = arguments.clone

@@ -6,20 +6,24 @@ module Elasticsearch
   module API
     module Cluster
       module Actions
-        # Returns a list of any cluster-level changes (e.g. create index, update mapping,
-        # allocate or fail shard) which have not yet been executed.
+        # Deletes a component template
         #
-        # @option arguments [Boolean] :local Return local information, do not retrieve the state from master node (default: false)
+        # @option arguments [String] :name The name of the template
+        # @option arguments [Time] :timeout Explicit operation timeout
         # @option arguments [Time] :master_timeout Specify timeout for connection to master
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-pending.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-component-templates.html
         #
-        def pending_tasks(arguments = {})
+        def delete_component_template(arguments = {})
+          raise ArgumentError, "Required argument 'name' missing" unless arguments[:name]
+
           arguments = arguments.clone
 
-          method = Elasticsearch::API::HTTP_GET
-          path   = "_cluster/pending_tasks"
+          _name = arguments.delete(:name)
+
+          method = Elasticsearch::API::HTTP_DELETE
+          path   = "_component_template/#{Utils.__listify(_name)}"
           params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
           body = nil
@@ -29,8 +33,8 @@ module Elasticsearch
         # Register this action with its valid params when the module is loaded.
         #
         # @since 6.2.0
-        ParamsRegistry.register(:pending_tasks, [
-          :local,
+        ParamsRegistry.register(:delete_component_template, [
+          :timeout,
           :master_timeout
         ].freeze)
 end

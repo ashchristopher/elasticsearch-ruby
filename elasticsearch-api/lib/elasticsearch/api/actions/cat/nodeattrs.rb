@@ -17,7 +17,7 @@ module Elasticsearch
         # @option arguments [Boolean] :v Verbose mode. Display column headers
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cat-nodeattrs.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cat-nodeattrs.html
         #
         def nodeattrs(arguments = {})
           arguments = arguments.clone

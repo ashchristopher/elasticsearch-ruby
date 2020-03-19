@@ -16,7 +16,7 @@ module Elasticsearch
         # @option arguments [Time] :timeout Explicit operation timeout
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-nodes-info.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-nodes-info.html
         #
         def info(arguments = {})
           arguments = arguments.clone

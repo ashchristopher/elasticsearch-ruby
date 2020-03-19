@@ -13,7 +13,7 @@ module Elasticsearch
 
         # @option arguments [Hash] :body The definition of `actions` to perform (*Required*)
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-aliases.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-aliases.html
         #
         def update_aliases(arguments = {})
           raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

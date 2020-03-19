@@ -12,7 +12,7 @@ module Elasticsearch
         # @option arguments [Time] :master_timeout Explicit operation timeout for connection to master node
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/get-pipeline-api.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-pipeline-api.html
         #
         def get_pipeline(arguments = {})
           arguments = arguments.clone

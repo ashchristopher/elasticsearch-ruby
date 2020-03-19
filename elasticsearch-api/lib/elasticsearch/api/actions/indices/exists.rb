@@ -19,7 +19,7 @@ module Elasticsearch
         # @option arguments [Boolean] :include_defaults Whether to return all default setting for each of the indices.
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-exists.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-exists.html
         #
         def exists(arguments = {})
           raise ArgumentError, "Required argument 'index' missing" unless arguments[:index]

@@ -21,7 +21,7 @@ module Elasticsearch
         # @option arguments [Boolean] :request Clear request cache
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-clearcache.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-clearcache.html
         #
         def clear_cache(arguments = {})
           arguments = arguments.clone

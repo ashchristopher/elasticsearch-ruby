@@ -14,7 +14,7 @@ module Elasticsearch
         # @option arguments [Boolean] :include_defaults Whether to return all default clusters setting.
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-update-settings.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-update-settings.html
         #
         def get_settings(arguments = {})
           arguments = arguments.clone

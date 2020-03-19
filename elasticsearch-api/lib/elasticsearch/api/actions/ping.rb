@@ -9,7 +9,7 @@ module Elasticsearch
       #
 
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/index.html
+      # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/index.html
       #
       def ping(arguments = {})
         arguments = arguments.clone

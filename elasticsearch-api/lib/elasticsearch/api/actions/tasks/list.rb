@@ -19,7 +19,7 @@ module Elasticsearch
         # @option arguments [Time] :timeout Explicit operation timeout
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/tasks.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/tasks.html
         #
         def list(arguments = {})
           arguments = arguments.clone

@@ -21,7 +21,7 @@ module Elasticsearch
 
         # @option arguments [Hash] :body The index settings to be updated (*Required*)
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-update-settings.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-update-settings.html
         #
         def put_settings(arguments = {})
           raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

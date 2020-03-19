@@ -13,7 +13,7 @@ module Elasticsearch
         # @option arguments [Boolean] :active_only Display only those recoveries that are currently on-going
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-recovery.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-recovery.html
         #
         def recovery(arguments = {})
           arguments = arguments.clone

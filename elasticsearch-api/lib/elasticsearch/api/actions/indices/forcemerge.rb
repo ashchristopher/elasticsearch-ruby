@@ -19,7 +19,7 @@ module Elasticsearch
         # @option arguments [Boolean] :only_expunge_deletes Specify whether the operation should only expunge deleted documents
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-forcemerge.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-forcemerge.html
         #
         def forcemerge(arguments = {})
           arguments = arguments.clone

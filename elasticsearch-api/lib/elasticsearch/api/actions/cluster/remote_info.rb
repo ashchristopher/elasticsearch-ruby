@@ -10,7 +10,7 @@ module Elasticsearch
         #
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/cluster-remote-info.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/cluster-remote-info.html
         #
         def remote_info(arguments = {})
           arguments = arguments.clone

@@ -5,21 +5,20 @@
 module Elasticsearch
   module API
     module Actions
-      # Allows an arbitrary script to be executed and a result to be returned
+      # Returns available script types, languages and contexts
       #
 
-      # @option arguments [Hash] :body The script to execute
       #
-      # @see https://www.elastic.co/guide/en/elasticsearch/painless/7.6/painless-execute-api.html
+      # @see [TODO]
       #
-      def scripts_painless_execute(arguments = {})
+      def get_script_languages(arguments = {})
         arguments = arguments.clone
 
         method = Elasticsearch::API::HTTP_GET
-        path   = "_scripts/painless/_execute"
+        path   = "_script_language"
         params = {}
 
-        body = arguments[:body]
+        body = nil
         perform_request(method, path, params, body).body
       end
     end

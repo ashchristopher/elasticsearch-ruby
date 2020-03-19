@@ -18,7 +18,7 @@ module Elasticsearch
         # @option arguments [Boolean] :only_ancient_segments If true, only ancient (an older Lucene major release) segments will be upgraded
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.5/indices-upgrade.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/indices-upgrade.html
         #
         def upgrade(arguments = {})
           arguments = arguments.clone
