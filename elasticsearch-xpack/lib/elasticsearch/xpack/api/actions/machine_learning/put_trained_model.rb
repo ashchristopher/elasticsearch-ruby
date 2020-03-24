@@ -5,30 +5,27 @@
 module Elasticsearch
   module XPack
     module API
-      module Security
+      module MachineLearning
         module Actions
           # TODO: Description
 
           #
-          # @option arguments [String] :user Username
+          # @option arguments [String] :model_id The ID of the trained models to store
 
-          # @option arguments [Hash] :body The privileges to test (*Required*)
+          # @option arguments [Hash] :body The trained model configuration (*Required*)
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-has-privileges.html
+          # @see
           #
-          def has_privileges(arguments = {})
+          def put_trained_model(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
+            raise ArgumentError, "Required argument 'model_id' missing" unless arguments[:model_id]
 
             arguments = arguments.clone
 
-            _user = arguments.delete(:user)
+            _model_id = arguments.delete(:model_id)
 
-            method = Elasticsearch::API::HTTP_GET
-            path   = if _user
-                       "_security/user/#{Elasticsearch::API::Utils.__listify(_user)}/_has_privileges"
-                     else
-                       "_security/user/_has_privileges"
-  end
+            method = Elasticsearch::API::HTTP_PUT
+            path   = "_ml/inference/#{Elasticsearch::API::Utils.__listify(_model_id)}"
             params = {}
 
             body = arguments[:body]

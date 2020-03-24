@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body The new lifecycle step to move to
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-move-to-step.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/ilm-move-to-step.html
           #
           def move_to_step(arguments = {})
             raise ArgumentError, "Required argument 'index' missing" unless arguments[:index]

@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-start.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/ilm-start.html
           #
           def start(arguments = {})
             arguments = arguments.clone

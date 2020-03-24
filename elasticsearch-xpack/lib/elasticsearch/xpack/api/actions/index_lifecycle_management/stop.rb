@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-stop.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/ilm-stop.html
           #
           def stop(arguments = {})
             arguments = arguments.clone

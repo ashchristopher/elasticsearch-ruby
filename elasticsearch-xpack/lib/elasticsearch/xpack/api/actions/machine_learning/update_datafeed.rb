@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body The datafeed update settings (*Required*)
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/ml-update-datafeed.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-update-datafeed.html
           #
           def update_datafeed(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

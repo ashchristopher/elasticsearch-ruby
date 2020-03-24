@@ -40,13 +40,10 @@ module Elasticsearch
           path   = if _index && _type
                      "#{Utils.__listify(_index)}/#{Utils.__listify(_type)}/_mappings"
                    elsif _index
-                     "#{Utils.__listify(_index)}/_mappings"
+                     "#{Utils.__listify(_index)}/_mapping"
                    elsif _type
-                     "_all/#{Utils.__listify(_type)}/_mappings"
-                   else
-                     "_mapping"
+                     "_mappings/#{Utils.__listify(_type)}"
   end
-
           params = Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
           body = arguments[:body]

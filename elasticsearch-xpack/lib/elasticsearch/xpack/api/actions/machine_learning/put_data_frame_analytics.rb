@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body The data frame analytics configuration (*Required*)
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/put-dfanalytics.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/put-dfanalytics.html
           #
           def put_data_frame_analytics(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

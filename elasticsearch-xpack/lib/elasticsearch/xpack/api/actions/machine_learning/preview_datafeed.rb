@@ -13,7 +13,7 @@ module Elasticsearch
           # @option arguments [String] :datafeed_id The ID of the datafeed to preview
 
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/ml-preview-datafeed.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-preview-datafeed.html
           #
           def preview_datafeed(arguments = {})
             raise ArgumentError, "Required argument 'datafeed_id' missing" unless arguments[:datafeed_id]

@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-ssl.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-ssl.html
           #
           def certificates(arguments = {})
             arguments = arguments.clone
@@ -23,7 +23,7 @@ module Elasticsearch
             perform_request(method, path, params, body).body
           end
       end
-      end
+    end
     end
   end
 end

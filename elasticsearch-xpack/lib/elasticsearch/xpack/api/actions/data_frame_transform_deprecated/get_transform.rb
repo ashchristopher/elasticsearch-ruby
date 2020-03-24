@@ -21,7 +21,7 @@ module Elasticsearch
           # Deprecated since version 7.5.0
           #
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/get-transform.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-transform.html
           #
           def get_transform(arguments = {})
             arguments = arguments.clone

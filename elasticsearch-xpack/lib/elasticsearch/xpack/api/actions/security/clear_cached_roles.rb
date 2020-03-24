@@ -13,7 +13,7 @@ module Elasticsearch
           # @option arguments [List] :name Role name
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-role-cache.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-clear-role-cache.html
           #
           def clear_cached_roles(arguments = {})
             raise ArgumentError, "Required argument 'name' missing" unless arguments[:name]

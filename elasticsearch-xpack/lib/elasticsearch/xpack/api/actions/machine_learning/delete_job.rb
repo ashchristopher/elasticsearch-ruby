@@ -15,7 +15,7 @@ module Elasticsearch
           # @option arguments [Boolean] :wait_for_completion Should this request wait until the operation has completed before returning
 
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/ml-delete-job.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-delete-job.html
           #
           def delete_job(arguments = {})
             raise ArgumentError, "Required argument 'job_id' missing" unless arguments[:job_id]

@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-get-status.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/ilm-get-status.html
           #
           def get_status(arguments = {})
             arguments = arguments.clone

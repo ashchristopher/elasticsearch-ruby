@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body The datafeed config (*Required*)
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/ml-put-datafeed.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-put-datafeed.html
           #
           def put_datafeed(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

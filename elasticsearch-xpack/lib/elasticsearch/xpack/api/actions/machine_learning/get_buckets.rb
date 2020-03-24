@@ -24,7 +24,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body Bucket selection details if not provided in URI
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/ml-get-bucket.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-get-bucket.html
           #
           def get_buckets(arguments = {})
             raise ArgumentError, "Required argument 'job_id' missing" unless arguments[:job_id]

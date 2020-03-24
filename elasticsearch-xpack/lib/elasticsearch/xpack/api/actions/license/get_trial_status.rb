@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/master/get-trial-status.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-trial-status.html
           #
           def get_trial_status(arguments = {})
             arguments = arguments.clone

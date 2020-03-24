@@ -13,7 +13,7 @@ module Elasticsearch
           # @option arguments [List] :username A comma-separated list of usernames
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-user.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-get-user.html
           #
           def get_user(arguments = {})
             arguments = arguments.clone

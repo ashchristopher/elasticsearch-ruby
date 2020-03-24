@@ -14,7 +14,7 @@ module Elasticsearch
           # @option arguments [String] :name Privilege name
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-privileges.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-get-privileges.html
           #
           def get_privileges(arguments = {})
             arguments = arguments.clone

@@ -15,7 +15,7 @@ module Elasticsearch
           #   (options: true,false,wait_for)
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-delete-role.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-delete-role.html
           #
           def delete_role(arguments = {})
             raise ArgumentError, "Required argument 'name' missing" unless arguments[:name]

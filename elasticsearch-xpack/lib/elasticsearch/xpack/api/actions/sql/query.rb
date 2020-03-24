@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body Use the `query` element to start a query. Use the `cursor` element to continue a query. (*Required*)
           #
-          # @see Execute SQL
+          # @see
           #
           def query(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
@@ -36,7 +36,7 @@ module Elasticsearch
             :format
           ].freeze)
       end
-      end
+    end
     end
   end
 end

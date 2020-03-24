@@ -11,7 +11,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body The token to invalidate (*Required*)
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-invalidate-token.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-invalidate-token.html
           #
           def invalidate_token(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]

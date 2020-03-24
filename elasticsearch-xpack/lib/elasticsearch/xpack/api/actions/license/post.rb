@@ -14,7 +14,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body licenses to be installed
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/master/update-license.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/update-license.html
           #
           def post(arguments = {})
             arguments = arguments.clone

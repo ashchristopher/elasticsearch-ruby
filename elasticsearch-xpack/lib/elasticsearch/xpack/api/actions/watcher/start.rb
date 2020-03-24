@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-start.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/watcher-api-start.html
           #
           def start(arguments = {})
             arguments = arguments.clone

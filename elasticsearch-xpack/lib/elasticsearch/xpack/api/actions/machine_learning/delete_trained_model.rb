@@ -10,20 +10,20 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @option arguments [String] :job_id The ID of the job to open
+          # @option arguments [String] :model_id The ID of the trained model to delete
 
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/ml-open-job.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/delete-inference.html
           #
-          def open_job(arguments = {})
-            raise ArgumentError, "Required argument 'job_id' missing" unless arguments[:job_id]
+          def delete_trained_model(arguments = {})
+            raise ArgumentError, "Required argument 'model_id' missing" unless arguments[:model_id]
 
             arguments = arguments.clone
 
-            _job_id = arguments.delete(:job_id)
+            _model_id = arguments.delete(:model_id)
 
-            method = Elasticsearch::API::HTTP_POST
-            path   = "_ml/anomaly_detectors/#{Elasticsearch::API::Utils.__listify(_job_id)}/_open"
+            method = Elasticsearch::API::HTTP_DELETE
+            path   = "_ml/inference/#{Elasticsearch::API::Utils.__listify(_model_id)}"
             params = {}
 
             body = nil

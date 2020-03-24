@@ -5,29 +5,27 @@
 module Elasticsearch
   module XPack
     module API
-      module Security
+      module MachineLearning
         module Actions
           # TODO: Description
 
           #
-          # @option arguments [String] :user Username
+          # @option arguments [String] :id The ID of the data frame analytics to explain
 
-          # @option arguments [Hash] :body The privileges to test (*Required*)
+          # @option arguments [Hash] :body The data frame analytics config to explain
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-has-privileges.html
+          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/explain-dfanalytics.html
           #
-          def has_privileges(arguments = {})
-            raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
-
+          def explain_data_frame_analytics(arguments = {})
             arguments = arguments.clone
 
-            _user = arguments.delete(:user)
+            _id = arguments.delete(:id)
 
             method = Elasticsearch::API::HTTP_GET
-            path   = if _user
-                       "_security/user/#{Elasticsearch::API::Utils.__listify(_user)}/_has_privileges"
+            path   = if _id
+                       "_ml/data_frame/analytics/#{Elasticsearch::API::Utils.__listify(_id)}/_explain"
                      else
-                       "_security/user/_has_privileges"
+                       "_ml/data_frame/analytics/_explain"
   end
             params = {}
 

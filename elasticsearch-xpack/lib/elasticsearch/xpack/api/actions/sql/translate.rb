@@ -11,7 +11,7 @@ module Elasticsearch
 
           # @option arguments [Hash] :body Specify the query in the `query` element. (*Required*)
           #
-          # @see Translate SQL into Elasticsearch queries
+          # @see
           #
           def translate(arguments = {})
             raise ArgumentError, "Required argument 'body' missing" unless arguments[:body]
@@ -26,7 +26,7 @@ module Elasticsearch
             perform_request(method, path, params, body).body
           end
       end
-      end
+    end
     end
   end
 end

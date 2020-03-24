@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/master/get-basic-status.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-basic-status.html
           #
           def get_basic_status(arguments = {})
             arguments = arguments.clone

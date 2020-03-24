@@ -13,7 +13,7 @@ module Elasticsearch
           # @option arguments [String] :index The name of the index to remove policy on
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-remove-policy.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/ilm-remove-policy.html
           #
           def remove_policy(arguments = {})
             raise ArgumentError, "Required argument 'index' missing" unless arguments[:index]

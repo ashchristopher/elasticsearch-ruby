@@ -14,7 +14,7 @@ module Elasticsearch
           # @option arguments [Boolean] :acknowledge whether the user has acknowledged acknowledge messages (default: false)
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/master/start-trial.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/start-trial.html
           #
           def post_start_trial(arguments = {})
             arguments = arguments.clone

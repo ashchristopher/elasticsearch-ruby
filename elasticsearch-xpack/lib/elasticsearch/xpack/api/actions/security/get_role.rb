@@ -13,7 +13,7 @@ module Elasticsearch
           # @option arguments [String] :name Role name
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-role.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/security-api-get-role.html
           #
           def get_role(arguments = {})
             arguments = arguments.clone

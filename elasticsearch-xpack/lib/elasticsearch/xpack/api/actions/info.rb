@@ -12,7 +12,7 @@ module Elasticsearch
         # @option arguments [List] :categories Comma-separated list of info categories. Can be any of: build, license, features
 
         #
-        # @see https://www.elastic.co/guide/en/elasticsearch/reference/current/info-api.html
+        # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/info-api.html
         #
         def info(arguments = {})
           arguments = arguments.clone

@@ -10,7 +10,7 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @see https://www.elastic.co/guide/en/elasticsearch/reference/master/delete-license.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/delete-license.html
           #
           def delete(arguments = {})
             arguments = arguments.clone

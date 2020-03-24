@@ -10,24 +10,24 @@ module Elasticsearch
           # TODO: Description
 
           #
-          # @option arguments [String] :id The ID of the data frame analytics stats to fetch
-          # @option arguments [Boolean] :allow_no_match Whether to ignore if a wildcard expression matches no data frame analytics. (This includes `_all` string or when no data frame analytics have been specified)
-          # @option arguments [Int] :from skips a number of analytics
-          # @option arguments [Int] :size specifies a max number of analytics to get
+          # @option arguments [String] :model_id The ID of the trained models stats to fetch
+          # @option arguments [Boolean] :allow_no_match Whether to ignore if a wildcard expression matches no trained models. (This includes `_all` string or when no trained models have been specified)
+          # @option arguments [Int] :from skips a number of trained models
+          # @option arguments [Int] :size specifies a max number of trained models to get
 
           #
-          # @see http://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-dfanalytics-stats.html
+          # @see https://www.elastic.co/guide/en/elasticsearch/reference/7.6/get-inference-stats.html
           #
-          def get_data_frame_analytics_stats(arguments = {})
+          def get_trained_models_stats(arguments = {})
             arguments = arguments.clone
 
-            _id = arguments.delete(:id)
+            _model_id = arguments.delete(:model_id)
 
             method = Elasticsearch::API::HTTP_GET
-            path   = if _id
-                       "_ml/data_frame/analytics/#{Elasticsearch::API::Utils.__listify(_id)}/_stats"
+            path   = if _model_id
+                       "_ml/inference/#{Elasticsearch::API::Utils.__listify(_model_id)}/_stats"
                      else
-                       "_ml/data_frame/analytics/_stats"
+                       "_ml/inference/_stats"
   end
             params = Elasticsearch::API::Utils.__validate_and_extract_params arguments, ParamsRegistry.get(__method__)
 
@@ -38,7 +38,7 @@ module Elasticsearch
           # Register this action with its valid params when the module is loaded.
           #
           # @since 6.2.0
-          ParamsRegistry.register(:get_data_frame_analytics_stats, [
+          ParamsRegistry.register(:get_trained_models_stats, [
             :allow_no_match,
             :from,
             :size
