@@ -153,6 +153,13 @@ RSpec::Matchers.define :match_response do |pairs, test|
 
   match do |response|
     pairs = sanitize_pairs(pairs)
+    if response.nil? || response.empty?
+      logger = Logger.new($stdout)
+      logger.error '=================================================='
+      logger.error "[ERROR REPORT] - response is empty or nil"
+      logger.error "Test: #{test}"
+      logger.error '=================================================='
+    end
     compare_pairs(pairs, response, test).empty?
   end
 

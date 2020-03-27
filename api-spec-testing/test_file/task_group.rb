@@ -101,6 +101,11 @@ module Elasticsearch
                 do_actions[-1].response
               end
             end
+            if @response.nil? || @response.empty?
+              logger = Logger.new($stdout)
+              logger.error "ERROR REPORT - Response is empty"
+              logger.error "ERROR REPORT - Do actions: #{do_actions}"
+            end
           end
 
           # Does this task group expect to raise an exception for an action?
